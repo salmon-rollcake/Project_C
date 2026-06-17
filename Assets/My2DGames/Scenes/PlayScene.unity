@@ -283,12 +283,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1145119696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &710896920
 GameObject:
@@ -300,6 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710896921}
   - component: {fileID: 710896922}
+  - component: {fileID: 710896923}
   m_Layer: 0
   m_Name: BG2_0
   m_TagString: Untagged
@@ -381,6 +382,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &710896923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710896920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95931b313293114e96bca67e077463a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::My2DGame.ParallaxBackground
+  cameraTransform: {fileID: 519420032}
+  parallaxEffectMultiplier: 0.6
 --- !u!1 &816232194
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 816232195}
   - component: {fileID: 816232196}
+  - component: {fileID: 816232197}
   m_Layer: 0
   m_Name: BG1_0
   m_TagString: Untagged
@@ -472,6 +488,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &816232197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816232194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95931b313293114e96bca67e077463a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::My2DGame.ParallaxBackground
+  cameraTransform: {fileID: 519420032}
+  parallaxEffectMultiplier: 0.9
 --- !u!1 &1145119694
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +594,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1145119698
@@ -709,7 +740,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: df70fa95-8a34-4494-b137-73ab6b9c7d37
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!70 &1145119700
@@ -772,6 +803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688641161}
   - component: {fileID: 1688641162}
+  - component: {fileID: 1688641163}
   m_Layer: 0
   m_Name: BG3_0
   m_TagString: Untagged
@@ -853,10 +885,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1688641163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688641160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95931b313293114e96bca67e077463a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::My2DGame.ParallaxBackground
+  cameraTransform: {fileID: 519420032}
+  parallaxEffectMultiplier: 0.3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 465277228}
   - {fileID: 1145119696}
