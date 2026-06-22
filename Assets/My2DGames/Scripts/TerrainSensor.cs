@@ -20,9 +20,12 @@ namespace My2DGame
 
         // 레이캐스트
         RaycastHit2D[] groundHits = new RaycastHit2D[5];
+        RaycastHit2D[] wallHits = new RaycastHit2D[5];
 
         // 바닥 체크
         bool isGround;
+
+        bool isWall;
         #endregion
 
         #region Property

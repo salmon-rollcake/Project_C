@@ -7,10 +7,11 @@ namespace My2DGame
     /// </summary>
     public class AnimationString : MonoBehaviour
     {
-        public static string isMove = "IsMove";
-        public static string isRun = "IsRun";
-        public static string isGround = "IsGround";
-        public static string JumpTrg = "jumpTrg";
-        public static string yVelocity = "YVelocity";
+        public static string isMove = "isMove";
+        public static string isRun = "isRun";
+        public static string isGround = "isGround";
+        public static string JumpTrg = "JumpTrg";
+        public static string yVelocity = "yVelocity";
+        public static string AtkTrg = "AtkTrg";
     }
 }
