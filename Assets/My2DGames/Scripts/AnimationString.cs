@@ -13,5 +13,11 @@ namespace My2DGame
         public static string JumpTrg = "JumpTrg";
         public static string yVelocity = "yVelocity";
         public static string AtkTrg = "AtkTrg";
+        public static string isWall = "isWall";
+        public static string CannotMove = "CannotMove";
+        public static string HasTarget = "HasTarget";
+        public static string HitTrg = "HitTrg";
+        public static string isDeath = "isDeath";
+        public static string Cooldown = "Cooldown";
     }
 }

@@ -14,6 +14,7 @@ namespace My2DGame
 
         // 접촉면 체크
         [SerializeField] float groundDis = 0.05f;
+        [SerializeField] float wallDis = 0.05f;
 
         // 접촉면 조건 설정
         [SerializeField] ContactFilter2D contFil;
@@ -41,6 +42,20 @@ namespace My2DGame
                 anim.SetBool(AnimationString.isGround, value);
             }
         }
+
+        public bool IsWall
+        {
+            get
+            {
+                return isWall;
+            }
+            set
+            {
+                isWall = value;
+                // 필요하다면 애니메이터에 벽 충돌 변수 전달
+                // if (anim != null) anim.SetBool("isWall", value);
+            }
+        }
         #endregion
 
         #region Unity Event Methods
@@ -53,7 +68,15 @@ namespace My2DGame
 
         private void FixedUpdate()
         {
+            // 1. 바닥 감지 (아래 방향)
             IsGround = touchingColl.Cast(Vector2.down, contFil, groundHits, groundDis) > 0;
+
+            // 2. 벽 감지 (바라보는 방향)
+            // localScale.x가 양수이면 오른쪽(Vector2.right), 음수이면 왼쪽(Vector2.left)을 바라봅니다.
+            Vector2 wallDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+
+            // 바라보는 방향으로 캐스트를 쏘아 벽을 감지합니다.
+            IsWall = touchingColl.Cast(wallDirection, contFil, wallHits, wallDis) > 0;
         }
         #endregion
     }
